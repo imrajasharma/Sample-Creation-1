@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Creation</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="JavaScript/myJson.js"></script>
+    <script src="JavaScript/myJquery.js"></script>
+    <script src="JavaScript/script.js"></script>
+    <script src="JavaScript/jsonLocationData.js"></script>
+    <script src="JavaScript/sampleFormData.js"></script>
+    <script>
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <div class="header">
+        Employement Form
+    </div>
+    <div class="formContainer">
+
+        <form id="my_form" name="myForm" action="#">
+            <!-- ID -->
+            <!-- <label class="labelBoxSizing" for="empId">Employement ID</label>
+            <input class="inputBoxSizing"  type="text" name="empId" required> <br> -->
+
+            <!-- Name -->
+            <label class="labelBoxSizing" for="empName">Employee Name <strong>*</strong></label>
+            <input class="inputBoxSizing" type="text" name="empName" maxlength="25" required> <br>
+
+            <!-- Gender -->
+            <div class="genderBox">
+                <label class="genderContainer" for="Gender">Select Gender</label>
+                <input type="radio" name="Gender" value="Male" required><label for="male"> Male
+                    &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="radio" name="Gender" value="Female" required><label for="female"> Female
+                    &nbsp;&nbsp;&nbsp;&nbsp; </label>
+                <input type="radio" name="Gender" value="Other" required><label for="other"> Other
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </label>
+            </div>
+
+
+            <!-- Age -->
+            <label class="labelBoxSizing" for="age">Age <strong>*</strong></label>
+            <input id="ageId" class="inputBoxSizing" maxlength="2" onkeyup="checkNumberValidation(this)" type="text"
+                name="age" required> <br>
+            <span id="ageValidationText"></span>
+
+            <!-- Designation -->
+            <label class="labelBoxSizing" for="designation">Employee Designation</label>
+            <input class="inputBoxSizing" type="text" maxlength="25" name="designation" required> <br>
+
+            <!-- Phone -->
+            <label class="labelBoxSizing" for="phone">Phone Number <strong>*</strong></label>
+            <input id="phoneId" class="inputBoxSizing" type="text" maxlength="10" onkeyup="checkNumberValidation(this)"
+                name="phone" required> <br>
+            <span id="phoneValidationText"></span>
+
+            <!-- Address -->
+            <label class="labelBoxSizing" for="address">Employee Address</label>
+            <textarea class="inputBoxSizing textAreaForAddress" maxlength="50" rows="4" type="text"
+                name="address"></textarea> <br>
+
+            <!-- Email -->
+            <label class="labelBoxSizing" for="email">Employee Email <strong>*</strong></label>
+            <input id="emailValue" class="inputBoxSizing" type="email" name="email" required> <br>
+            <span id="emailValidationText"></span>
+
+
+            <!-- Location -->
+            <label class="labelBoxSizing" for="location">Employee Location</label>
+            <select id="dropDownMenuBox" class="inputBoxSizing" name="location">
+                <option value="-1">-- select --</option>
+                <!-- <option value="Dehradun">Delhi</option>
+                <option value="Dehradun">Banglore</option> -->
+            </select><br><br>
+
+            <!-- Manager -->
+            <label class="labelBoxSizing" for="manager">Employee Manager</label>
+            <input class="inputBoxSizing" type="text" maxlength="25" name="manager"> <br><br><br>
+
+            <!--  Submit Button   -->
+            <input id="buttonID" class="submitBoxSizing" type="button" onclick="validateForm()" value="Submit Form">
+
+        </form>
+    </div>
+
+    <!-- User Data Div (appending later on by Jquery automatically) -->
+
+</body>
+
+</html>
